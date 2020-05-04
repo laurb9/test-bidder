@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+		"ms-vscode.go",
+        "ms-azuretools.vscode-docker",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "redhat.vscode-xml",
+        "redhat.vscode-yaml",
+        "humao.rest-client",
+        "ms-vscode-remote.vscode-remote-extensionpack"
+    ]
+}
