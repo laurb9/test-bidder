@@ -1,0 +1,31 @@
+name: Unit Tests
+
+on:
+  push:
+    paths-ignore:
+      - ".**"
+    branches:
+      - master
+  pull_request:
+    paths-ignore:
+      - ".**"
+    branches:
+      - master
+  release:
+    types:
+      - created
+
+jobs:
+  checks:
+    timeout-minutes: 5
+    name: Validate
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@master
+
+    - name: validate
+      uses: cedrickring/golang-action@1.5.2
+      env:
+        GO111MODULE: "on"
+        CGO_ENABLED: "0"
