@@ -1,0 +1,19 @@
+<VAST version="2.0">
+	<Ad id="1">
+		<Wrapper>
+			<AdSystem>OX</AdSystem>
+			<VASTAdTagURI><![CDATA[https://localhost/vast.xml]]></VASTAdTagURI>
+			<Impression></Impression>
+			<Creatives>
+				<Creative>
+					<Linear>
+						<TrackingEvents>
+							<ClickTracking><![CDATA[https://localhost/click]]></ClickTracking>
+						</TrackingEvents>
+						<VideoClicks></VideoClicks>
+					</Linear>
+				</Creative>
+			</Creatives>
+		</Wrapper>
+	</Ad>
+</VAST>

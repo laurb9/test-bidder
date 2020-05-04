@@ -1,0 +1,15 @@
+{
+    "id": "{{ uuid }}",
+    "impid": "{{ .ID }}",
+    "price": {{ randFloat | printf "%.02f" }},
+    "adomain": [
+        "example.com"
+    ],
+    "crid": "test-creative-id-1",
+    "adid": "test-video-ad-id-12345",
+    "w": {{ .Video.W }},
+    "h": {{ .Video.H }},
+    "adm": {{ tpl "vast.xml" | toString | toJSON }},
+    "ext": {
+    }
+}

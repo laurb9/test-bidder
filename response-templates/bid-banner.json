@@ -1,0 +1,15 @@
+{
+    "id": "{{ uuid }}",
+    "impid": "{{ .ID }}",
+    "price": {{ randFloat | printf "%.02f" }},
+    "adomain": [
+        "example.com"
+    ],
+    "crid": "test-creative-id-1",
+    "adid": "test-banner-ad-id-12345",
+    "w": {{ if .Banner.Format }}{{ (index .Banner.Format 0).W }}{{ else }}720{{ end }},
+    "h": {{ if .Banner.Format }}{{ (index .Banner.Format 0).H }}{{ else }}80{{ end }},
+    "adm": {{ tpl "ad.html" | toString | toJSON }},
+    "ext": {
+    }
+}

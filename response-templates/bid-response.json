@@ -1,0 +1,22 @@
+{
+    "id": "{{ .ID }}",
+    "seatbid": [
+        {
+            "bid": [
+{{ with index .Imp 0 -}}
+    {{ if .Banner -}}
+        {{ template "bid-banner.json" . }}
+    {{ else if .Video -}}
+        {{ template "bid-video.json" . }}
+    {{- end }}
+{{ end -}}
+            ],
+            "seat": "Bidder"
+        }
+    ],
+    "bidid": "{{ uuid }}",
+    "cur": "EUR",
+    "ext": {
+        "pid": "bar"
+    }
+}
